@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="100.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="book.shelves.view.RatingViewController">
+   <children>
+      <Label fx:id="userNameLabel" layoutX="14.0" layoutY="7.0" text="User Name" />
+      <Label fx:id="ratingLabel" layoutX="167.0" layoutY="7.0" text="2018-01-02 Rating: 5" />
+      <Label fx:id="commentLabel" layoutX="14.0" layoutY="35.0" prefWidth="290.0" text="The Book so Good" wrapText="true" />
+   </children>
+</AnchorPane>

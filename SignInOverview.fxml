@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="book.shelves.view.SignInController">
+   <children>
+      <JFXTextField fx:id="nameField" layoutX="290.0" layoutY="77.0" promptText="Your Name" />
+      <Label layoutX="258.0" layoutY="13.0" text="Sign In">
+         <font>
+            <Font name="Aegyptus" size="32.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="phoneNumberField" layoutX="290.0" layoutY="115.0" promptText="Your Phone Number" />
+      <JFXTextField fx:id="addressField" layoutX="290.0" layoutY="191.0" promptText="Your Address" />
+      <JFXTextField fx:id="emailField" layoutX="290.0" layoutY="229.0" promptText="Your Email" />
+      <JFXCheckBox fx:id="agreeCheckBox" layoutX="184.0" layoutY="334.0" text="Agree our terms and conditions" />
+      <JFXButton fx:id="signInButton" layoutX="250.0" layoutY="361.0" onAction="#signOnClick" text="Sign In" />
+      <JFXPasswordField fx:id="passwordField" layoutX="290.0" layoutY="266.0" promptText="Your Password" />
+      <DatePicker fx:id="birthDateField" layoutX="290.0" layoutY="156.0" prefHeight="25.0" prefWidth="155.0" />
+      <Label layoutX="182.0" layoutY="82.0" text="Name:" />
+      <Label layoutX="182.0" layoutY="120.0" text="Phone Number:" />
+      <Label layoutX="182.0" layoutY="161.0" text="Birth Date:" />
+      <Label layoutX="182.0" layoutY="196.0" text="Address:" />
+      <Label layoutX="182.0" layoutY="234.0" text="Email:" />
+      <Label layoutX="182.0" layoutY="271.0" text="Password:" />
+      <JFXButton layoutX="313.0" layoutY="361.0" onAction="#cancelEvent" text="Cancel" />
+   </children>
+</AnchorPane>

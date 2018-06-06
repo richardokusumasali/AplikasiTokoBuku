@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="book.shelves.view.SearchController">
+   <children>
+      <JFXTextField fx:id="keywordsField" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="502.0" promptText="Book Title, Author, Category" />
+      <Button layoutX="523.0" layoutY="13.0" mnemonicParsing="false" onAction="#searchBtnEvent" text="Search" />
+      <ScrollPane layoutX="14.0" layoutY="50.0" prefHeight="339.0" prefWidth="572.0">
+         <content>
+            <GridPane fx:id="resultGrid">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+              </rowConstraints>
+            </GridPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
