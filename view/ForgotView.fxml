@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="book.shelves.view.ForgotController">
+   <children>
+      <Button layoutX="226.0" layoutY="287.0" mnemonicParsing="false" onAction="#confirmBtnEvent" text="Confirm" />
+      <Label layoutX="213.0" layoutY="117.0" text="User name:" />
+      <JFXTextField fx:id="nameField" layoutX="213.0" layoutY="132.0" prefHeight="25.0" prefWidth="175.0" promptText="Enter Your Name" />
+      <Label layoutX="213.0" layoutY="168.0" text="Phone Number:" />
+      <JFXTextField fx:id="phoneNumberField" layoutX="213.0" layoutY="183.0" prefHeight="25.0" prefWidth="175.0" promptText="Enter Your Phone Number" />
+      <Label layoutX="213.0" layoutY="220.0" text="New Password" />
+      <Label layoutX="167.0" layoutY="55.0" text="Forgot Password">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXPasswordField fx:id="passwordField" layoutX="212.0" layoutY="235.0" prefHeight="25.0" prefWidth="175.0" promptText="Enter new password" />
+      <Button layoutX="312.0" layoutY="287.0" mnemonicParsing="false" onAction="#cancelBtnEvent" text="Cancel" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="book.shelves.view.BankAccountController">
+   <children>
+      <JFXTextField fx:id="accountNumberField" layoutX="223.0" layoutY="168.0" />
+      <Label layoutX="223.0" layoutY="153.0" text="Bank Account Id" />
+      <Label layoutX="223.0" layoutY="207.0" text="Bank Name" />
+      <JFXTextField fx:id="bankNameField" layoutX="223.0" layoutY="222.0" />
+      <Label layoutX="154.0" layoutY="79.0" text="Add Bank Account">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Button layoutX="241.0" layoutY="267.0" mnemonicParsing="false" onAction="#addAccount" text="Add" />
+      <Button layoutX="297.0" layoutY="267.0" mnemonicParsing="false" onAction="#cancelEvent" text="Cancel" />
+   </children>
+</AnchorPane>

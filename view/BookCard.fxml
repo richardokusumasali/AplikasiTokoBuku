@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="book.shelves.view.BookCardController">
+   <children>
+      <Button fx:id="detailBtn" layoutX="63.0" layoutY="162.0" mnemonicParsing="false" onAction="#detailBtnEvent" text="Read More" />
+      <Label fx:id="bookId" layoutX="150.0" layoutY="166.0" text="Label" visible="false" />
+      <GridPane layoutX="7.0" layoutY="140.0" prefHeight="15.0" prefWidth="186.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="bookTitle" text="Book" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="36.0" layoutY="14.0" prefHeight="117.0" prefWidth="129.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="bookImage" fitHeight="121.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

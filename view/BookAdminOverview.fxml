@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="book.shelves.view.BookAdminController">
+   <children>
+      <SplitPane dividerPositions="0.41304347826086957" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="bookTable" editable="true" layoutY="-2.0" prefHeight="345.0" prefWidth="243.0">
+                    <columns>
+                      <TableColumn fx:id="bookTitleColumn" prefWidth="89.0" text="Title" />
+                      <TableColumn fx:id="bookPublisherColumn" prefWidth="110.0" text="Publisher" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="120.0" text="Book Category:" />
+                  <JFXTextField fx:id="bookPriceField" layoutX="174.0" layoutY="137.0" onKeyPressed="#numOnly" onKeyTyped="#numOnly" />
+                  <Label layoutX="180.0" layoutY="120.0" text="Book Price:" />
+                  <Label layoutX="175.0" layoutY="63.0" text="Released Date:" />
+                  <JFXTextField fx:id="bookPublisherField" layoutX="174.0" layoutY="30.0" />
+                  <Label layoutX="16.0" layoutY="67.0" text="Book Author:" />
+                  <JFXTextField fx:id="bookAuthorField" layoutX="16.0" layoutY="86.0" />
+                  <Label layoutX="174.0" layoutY="15.0" text="Book Publisher:" />
+                  <Label layoutX="14.0" layoutY="14.0" text="Book Title:" />
+                  <DatePicker fx:id="releaseDatePicker" layoutX="174.0" layoutY="88.0" prefHeight="25.0" prefWidth="155.0" />
+                  <JFXTextField fx:id="bookTitleField" layoutX="16.0" layoutY="29.0" />
+                  <Label layoutX="16.0" layoutY="175.0" text="Book Description:" />
+                  <TextArea fx:id="descriptionField" layoutX="15.0" layoutY="199.0" prefHeight="122.0" prefWidth="314.0" wrapText="true" />
+                  <ComboBox fx:id="bookCategoryField" layoutX="13.0" layoutY="137.0" prefHeight="26.0" prefWidth="135.0" />
+                  <JFXButton layoutX="94.0" layoutY="329.0" onAction="#addPressed" text="Add" />
+                  <JFXButton layoutX="138.0" layoutY="329.0" onAction="#deletePressed" text="Delete" />
+                  <JFXButton layoutX="199.0" layoutY="329.0" onAction="#updatePressed" text="Update" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

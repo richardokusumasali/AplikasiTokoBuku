@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="146.0" layoutY="62.0" text="Book Shelves - Desktop">
+         <font>
+            <Font name="Aegyptus" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="124.0" layoutY="117.0" text="Book Shelves is one of the eBook Store">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="138.0" text="We sell eBook with varies of genres of books">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="72.0" layoutY="159.0" text="Our goal is to share ideas and entertain the reader">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="120.0" layoutY="180.0" text="User can get out books by rent or buy it">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="368.0" text="BookShelves 2018">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="196.0" layoutY="350.0" text="Visit BookShelves@gmail.com">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
