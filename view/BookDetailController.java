@@ -59,12 +59,11 @@ public class BookDetailController {
             dateLabel.setText(rs.getString("book_released_date"));
             priceLabel.setText("$"+String.valueOf(rs.getInt("book_price")));
             descriptionLabel.setText(rs.getString("book_description"));
+            bookIcon.setImage(new Image(rs.getString("book_icon_src")));
         }
         
         //set the rating combo items
         ratingCombo.getItems().addAll("1", "2", "3", "4", "5");
-        
-        bookIcon.setImage(new Image("file:src/book/shelves/imgsrc/book.png"));
         
         loadComments();
         

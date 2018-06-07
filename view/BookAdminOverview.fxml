@@ -38,11 +38,23 @@
                   <DatePicker fx:id="releaseDatePicker" layoutX="174.0" layoutY="88.0" prefHeight="25.0" prefWidth="155.0" />
                   <JFXTextField fx:id="bookTitleField" layoutX="16.0" layoutY="29.0" />
                   <Label layoutX="16.0" layoutY="175.0" text="Book Description:" />
-                  <TextArea fx:id="descriptionField" layoutX="15.0" layoutY="199.0" prefHeight="122.0" prefWidth="314.0" wrapText="true" />
+                  <TextArea fx:id="descriptionField" layoutX="15.0" layoutY="199.0" prefHeight="122.0" prefWidth="155.0" wrapText="true" />
                   <ComboBox fx:id="bookCategoryField" layoutX="13.0" layoutY="137.0" prefHeight="26.0" prefWidth="135.0" />
-                  <JFXButton layoutX="94.0" layoutY="329.0" onAction="#addPressed" text="Add" />
-                  <JFXButton layoutX="138.0" layoutY="329.0" onAction="#deletePressed" text="Delete" />
-                  <JFXButton layoutX="199.0" layoutY="329.0" onAction="#updatePressed" text="Update" />
+                  <JFXButton layoutX="16.0" layoutY="343.0" onAction="#addPressed" text="Add" />
+                  <JFXButton layoutX="60.0" layoutY="343.0" onAction="#deletePressed" text="Delete" />
+                  <JFXButton layoutX="121.0" layoutY="343.0" onAction="#updatePressed" text="Update" />
+                  <JFXButton layoutX="234.0" layoutY="330.0" onAction="#uploadEvent" text="Upload" />
+                  <GridPane layoutX="195.0" layoutY="188.0" prefHeight="136.0" prefWidth="135.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fx:id="bookIcon" fitHeight="122.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </GridPane>
                </children>
             </AnchorPane>
         </items>

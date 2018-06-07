@@ -50,10 +50,7 @@ public class BookCardController implements Initializable {
     }
     
     public void setImage(String src){
-        if(src == ""){
-           
-        }
-        else{
+        if(src != null){
             System.out.println(src);
             Image img = new Image(src);
             bookImage.setImage(img);

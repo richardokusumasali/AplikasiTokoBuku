@@ -6,8 +6,11 @@ import java.time.format.DateTimeFormatter;
 import book.shelves.BookShelves;
 import book.shelves.model.Book;
 import book.shelves.utils.DBUtils;
+import book.shelves.utils.Global;
 import book.shelves.utils.ViewUtils;
 import com.jfoenix.controls.JFXTextField;
+import java.io.File;
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javafx.collections.FXCollections;
@@ -19,9 +22,13 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
+import org.apache.commons.io.FileUtils;
 
 public class BookAdminController {
 	@FXML
@@ -46,6 +53,8 @@ public class BookAdminController {
 	TextArea descriptionField;
         @FXML
         AnchorPane pane;
+        @FXML
+        ImageView bookIcon;
         private int order;
         
 	private Book loadedBook = new Book();
@@ -93,6 +102,7 @@ public class BookAdminController {
 		bookCategoryField.setValue(book.getBookCategory());
 		releaseDatePicker.setValue(LocalDate.parse(book.getBookReleasedDate(), DateTimeFormatter.ISO_LOCAL_DATE));
 		descriptionField.setText(book.getBookDescription());
+                bookIcon.setImage(new Image(book.getBookIconSrc()));
             }else{
 		bookTitleField.setText("");
 		bookAuthorField.setText("");
@@ -101,6 +111,7 @@ public class BookAdminController {
 		bookCategoryField.setValue("");
 		releaseDatePicker.setValue(null);
 		descriptionField.setText("");
+                bookIcon.setImage(null);
             }
 	}
 	
@@ -188,5 +199,29 @@ public class BookAdminController {
             ResultSet rs = pstm.executeQuery();
             if(rs.next()) return true;
             return false;
+        }
+        
+        public void uploadEvent() throws IOException, SQLException{
+            FileChooser fileChooser = new FileChooser();
+            FileChooser.ExtensionFilter jpgFilter = 
+                    new FileChooser.ExtensionFilter("*.)jpg", "* JPG");
+            FileChooser.ExtensionFilter pngFilter = 
+                    new FileChooser.ExtensionFilter("*.)png", "* PNG");
+            File file = fileChooser.showOpenDialog(null);
+            File dest = new File("C:\\xampp\\htdocs\\BookShelves\\img");
+            FileUtils.copyFileToDirectory(file, dest);
+            
+            String fileSrc = "http://localhost/BookShelves/img/" 
+                + file.getName();
+            
+            String sql = "update book set book_icon_src = ? where book_id = ?";
+            PreparedStatement pstm = BookShelves.conn.prepareStatement(sql);
+            pstm.setString(1, fileSrc);
+            pstm.setInt(2, loadedBook.getBookId());
+            int res = pstm.executeUpdate();
+            if(res == 1) System.out.println("Success uploading");
+            else System.out.println("Unsuccess uploading");
+            System.out.println(fileSrc);
+            updateTable();
         }
 }
